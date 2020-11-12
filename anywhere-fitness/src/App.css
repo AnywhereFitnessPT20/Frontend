@@ -1,38 +1,230 @@
-.App {
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100vh;
+}
+
+#login-h1 {
   text-align: center;
+  font-size: 4.8rem;
+  font-family: Raleway;
+  font-weight: bold;
+  margin-top: 12rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login-field {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 40%;
+}
+
+.login-form-labels {
+  font-size: 2rem;
+  margin-right: 1rem;
+  font-family: Raleway;
+}
+
+#login-button {
+  color: black;
+  display: block;
+  margin: 1.5rem auto;
+  font-size: 2rem;
+  cursor: pointer;
+  font-family: Raleway;
+  width: 40%;
+  background: gray;
+  font-weight: bold;
+}
+
+#login-button:hover {
   color: white;
+  background: black;
+  transition: 0.25s;
 }
 
-.App-link {
-  color: #61dafb;
+#login-comment-error-message {
+  text-align: center;
+  color: red;
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#login-comment-upload-message {
+  text-align: center;
+  color: black;
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+}
+
+#login-top-banner {
+  text-align: center;
+  background: rgb(255, 140, 29);
+  font-size: 1.4rem;
+  padding: 1rem;
+  font-family: Raleway Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+#login-split {
+  display: flex;
+}
+
+#login-left {
+  width: 50%
+}
+
+#login-right {
+  width: 50%;
+}
+
+#login-image {
+  width: 100%;
+}
+
+.login-form-inputs {
+  font-size: 2rem;
+  font-family: Raleway;
+}
+
+#login-field-username {
+  margin-top: 2rem;
+}
+
+/* Add Class */
+
+#addClass-h1 {
+  text-align: center;
+  font-size: 4.8rem;
+  font-family: Raleway;
+  font-weight: bold;
+  margin-top: 3rem;
+}
+
+.addClass-field {
+  margin: 2rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+}
+
+.addClass-form-labels {
+  font-size: 2rem;
+  margin-right: 1rem;
+  font-family: Raleway;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#addClass-button {
+  color: black;
+  display: block;
+  margin: 1.5rem auto;
+  font-size: 2rem;
+  cursor: pointer;
+  font-family: Raleway;
+  width: 40%;
+  background: gray;
+  font-weight: bold;
+}
+
+#addClass-button:hover {
+  color: white;
+  background: black;
+  transition: 0.25s;
+}
+
+#addClass-comment-error-message {
+  text-align: center;
+  color: red;
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+}
+
+#addClass-comment-upload-message {
+  text-align: center;
+  color: black;
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+}
+
+#addClass-top-banner {
+  text-align: center;
+  background: rgb(255, 140, 29);
+  font-size: 1.4rem;
+  padding: 1rem;
+  font-family: Raleway Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  display: flex;
+}
+
+#addClass-split {
+  display: flex;
+}
+
+#addClass-left {
+  width: 50%
+}
+
+#addClass-right {
+  width: 50%;
+}
+
+#addClass-image {
+  width: 100%;
+}
+
+.addClass-form-inputs {
+  font-size: 1.4rem;
+  font-family: Raleway;
+}
+
+#addClass-field-username {
+  margin-top: 2rem;
+}
+
+.addClass-textareas {
+  width: 60rem;
+  height: 8rem;
+  font-family: Raleway;
+  font-size: 1.4rem;
+}
+
+.addClass-nav-a {
+  color: black;
+  font-family: Raleway;
+  font-weight: bold;
+  display: block;
+  margin-right: 4rem;
+  text-decoration: none;
+}
+
+.addClass-nav-a:hover {
+  color: blue;
+}
+
+#here {
+  color: blue;
 }
