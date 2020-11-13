@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 class Login extends React.Component{
   constructor(){
@@ -12,6 +13,10 @@ class Login extends React.Component{
     }
   }
 
+  // componentDidUpdate(){
+  //   console.log(this.state.name.length);
+  // }
+
   textHandler = e => {
     this.setState({
       ...this.state,
@@ -20,7 +25,9 @@ class Login extends React.Component{
   }
 
   formSubmit = () => {
-    const fd = new FormData();
+    if (this.state.name.length > 0){
+      if (this.state.password.length > 0){
+        const fd = new FormData();
     fd.append("name", this.state.name);
     fd.append("password", this.state.password);
     this.setState({
@@ -51,17 +58,30 @@ class Login extends React.Component{
           message: ""
         })
       })
+      } else {
+        this.setState({
+          ...this.state,
+          message: "",
+          errorMessage: "Please enter a password"
+        })
+      }
+    } else {
+      this.setState({
+        ...this.state,
+        message: "",
+        errorMessage: "Please enter a name"
+      })
+    }
   }
 
   render(){
     return (
       <div id="login-form">
         <div id="addClass-top-banner">
-            <a className="addClass-nav-a" href="#">Home</a>
-                <a className="addClass-nav-a" href="#">Register</a>
-                <a className="addClass-nav-a" id="here" href="#">Login</a>
-                <a className="addClass-nav-a" href="#">Help</a>
-                <a className="addClass-nav-a" href="about.html">About</a></div>
+            <Link to={{pathname: `/Home`}} className="addClass-nav-a" href="#">Home</Link>
+            <Link to={{pathname: `/Register`}} className="addClass-nav-a" href="#">Register</Link>
+            <Link id="here" to={{pathname: `/Login`}} className="addClass-nav-a" href="#">Login</Link>
+          </div>
         <div id="login-split">
         <div id="login-left"><img id="login-image" alt="Anywhere Fitness background image" src="background.jpg"/></div>
         <div id="login-right">
