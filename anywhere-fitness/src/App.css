@@ -1,38 +1,524 @@
-.App {
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100vh;
+}
+
+#login-h1 {
   text-align: center;
+  font-size: 4.8rem;
+  font-family: Raleway;
+  font-weight: bold;
+  margin-top: 12rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-field {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login-form-labels {
+  font-size: 2rem;
+  margin-right: 1rem;
+  font-family: Raleway;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#login-button {
+  color: black;
+  display: block;
+  margin: 1.5rem auto;
+  font-size: 2rem;
+  cursor: pointer;
+  font-family: Raleway;
+  width: 40%;
+  background: gray;
+  font-weight: bold;
+}
+
+#login-button:hover {
+  color: white;
+  background: black;
+  transition: 0.25s;
+}
+
+#login-comment-error-message {
+  text-align: center;
+  color: red;
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+}
+
+#login-comment-upload-message {
+  text-align: center;
+  color: black;
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+}
+
+#login-top-banner {
+  text-align: center;
+  background: rgb(255, 140, 29);
+  font-size: 1.4rem;
+  padding: 1rem;
+  font-family: Raleway Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+#login-split {
+  display: flex;
+}
+
+#login-left {
+  width: 50%
+}
+
+#login-right {
+  width: 50%;
+}
+
+#login-image {
+  width: 100%;
+}
+
+.login-form-inputs {
+  font-size: 2rem;
+  font-family: Raleway;
+}
+
+#login-field-username {
+  margin-top: 2rem;
+}
+
+/* Add Class */
+
+#addClass-h1 {
+  text-align: center;
+  font-size: 4.8rem;
+  font-family: Raleway;
+  font-weight: bold;
+  margin-top: 3rem;
+}
+
+.addClass-field {
+  margin: 2rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+}
+
+.addClass-form-labels {
+  font-size: 2rem;
+  margin-right: 1rem;
+  font-family: Raleway;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#addClass-button {
+  color: black;
+  display: block;
+  margin: 1.5rem auto;
+  font-size: 2rem;
+  cursor: pointer;
+  font-family: Raleway;
+  width: 40%;
+  background: gray;
+  font-weight: bold;
+}
+
+#addClass-button:hover {
+  color: white;
+  background: black;
+  transition: 0.25s;
+}
+
+#addClass-comment-error-message {
+  text-align: center;
+  color: red;
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+}
+
+#addClass-comment-upload-message {
+  text-align: center;
+  color: black;
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+}
+
+#addClass-top-banner {
+  text-align: center;
+  background: rgb(255, 140, 29);
+  font-size: 1.4rem;
+  padding: 1rem;
+  font-family: Raleway Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  display: flex;
+}
+
+#addClass-split {
+  display: flex;
+}
+
+#addClass-left {
+  width: 50%
+}
+
+#addClass-right {
+  width: 50%;
+}
+
+#addClass-image {
+  width: 100%;
+}
+
+.addClass-form-inputs {
+  font-size: 1.4rem;
+  font-family: Raleway;
+}
+
+#addClass-field-username {
+  margin-top: 2rem;
+}
+
+.addClass-textareas {
+  width: 60rem;
+  height: 8rem;
+  font-family: Raleway;
+  font-size: 1.4rem;
+}
+
+.addClass-nav-a {
+  color: black;
+  font-family: Raleway;
+  font-weight: bold;
+  display: block;
+  margin-right: 4rem;
+  text-decoration: none;
+}
+
+.addClass-nav-a:hover {
+  color: blue;
+}
+
+#here {
+  color: blue;
+}
+
+/* Home page */
+
+#home-nav {
+  display: flex;
+  margin: 1.5rem;
+}
+
+#home-nav a {
+  font-weight: bold;
+  display: block;
+  margin-left: 1rem;
+  color: black;
+  font-size: 2rem;
+  font-family: Raleway;
+  text-decoration: none;
+}
+
+#home-nav a:hover {
+  color: blue;
+}
+
+#home-header-container {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+}
+
+#home-h1, #home-h2 {
+  font-family: "Raleway";
+}
+
+#home-h1 {
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+#home-header {
+  height: 12rem;
+}
+
+#home-just-below-header p {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  display: block;
+}
+
+#home-just-below-header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 8rem;
+  background: rgb(255,140,29);
+}
+
+#home-paragraphs {
+  margin-top: 1.5rem;
+  font-family: "Raleway";
+}
+
+#home-paragraph-about {
+  margin-top: 2.5rem;
+  font-family: "Raleway";
+}
+
+#home-h2 {
+  font-size: 8.6rem;
+  font-weight: bold;
+}
+
+#home-h2 a {
+  color: black;
+  text-decoration: none;
+}
+
+#home-h2 a:hover {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#home-body {
+  height: 65rem;
+  border-bottom: 1rem solid #BDBDBD;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#home-image-background {
+  height: 55rem;
+  background-image: url("background.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 0 25%;
+  border-top: 1px solid  rgb(255,140,29);;
+}
+
+#home-image-background h2 {
+  margin: 3rem 0 1.5rem 1.5rem;
+}
+
+#home-image-background p {
+  display: block;
+  width: 35rem;
+  font-size: 1.8rem;
+  margin-left: 1.5rem;
+  line-height: 2.5rem;
+  font-family: Open Sans;
+}
+
+#home-for-clients-button {
+  background: #FF9233;
+}
+
+#home-for-instructors-button {
+  background: white;
+}
+
+.home-buttons {
+  width: 277px;
+  height: 73px;
+  border-radius: 5px;
+  border: 1px solid #1B1A1A; 
+  font-family: Raleway;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 2.5rem 0rem 2.5rem 2.5rem;
+}
+
+.home-buttons:hover {
+  cursor: pointer;
+  background: black !important;
+  color: white;
+}
+
+#here {
+  color: blue;
+}
+
+#home-devs {
+  font-family: Raleway;
+  margin: 2rem;
+}
+
+.home-developer {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1.5rem;
+}
+
+.home-dev-images {
+  height: 25rem;
+  margin: 2rem;
+  border: 2px solid black;
+}
+
+.home-separate-img {
+  width: 75%;
+}
+
+h3 {
+  font-size: 5.6rem;
+  font-weight: bold;
+}
+
+.home-separate-img p {
+  font-size: 2.4rem;
+}
+
+@media (max-width: 930px) {
+  #home-header-container {
+      flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  #home-h1 {
+      text-align: center;
+  }
+
+  #home-nav {
+      margin: 0 auto;
+  }
+
+  #home-body {
+      height: 60rem;
+  }
+}
+
+@media (max-width: 785px) {
+  .home-developer {
+      display: block;
+  }
+
+  .home-dev-images, .home-separate-img {
+      display: block;
+      margin: 0 auto;
+  }
+
+  .home-separate-img h3, .home-separate-img p {
+      text-justify: center;
+      text-align: center;
+  }
+
+  .home-separate-img {
+      width: 95%;
+  }
+
+}
+
+@media (max-width: 700px) {
+  #home-h2, #home-p, #home-paragraphs {
+      text-align: center;
+  }
+
+  body section div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  #home-h1, #home-h2, .home-about-h3 {
+      font-size: 5.6rem;
+  }
+
+  #home-body {
+      height: 45rem;
+  }
+
+  #home-image-background {
+      height:40rem;
+  }
+
+  .home-separate-img p {
+      font-size: 1.8rem;
+  }
+
+  .home-about-h3 {
+      font-size: 3.6rem;
+  }
+      
+}
+
+@media (max-width: 630px) {
+  #home-bottom-buttons {
+      display:flex;
+      flex-direction: column;
+  }
+
+  .home-buttons {
+      margin: 1.5rem auto;
+  }
+}
+
+@media (max-width: 549px){
+  #home-body {
+      height: 35rem;
+  }
+
+  #home-image-background {
+      height: 30rem;
+  }
+
+  .home-buttons {
+      width: 207.75px;
+      height: 54.75px;
+      font-size: 22.5px;
+      font-weight: bold;
+  }
+
+  #home-nav {
+      margin: 1rem auto;
+  }
+}
+
+@media (max-width: 515px) {
+  #home-h1, #home-h2, .about-h3 {
+      font-size: 3.6rem;
+  }
+
+  #home-nav a {
+      font-size: 1.7rem;
+  }
+
+  #home-header {
+      height: 9rem;
+  }
+}
+
+@media (max-width: 400px){
+  #home-image-background p {
+      width: 90%;
+  }
+
+  .home-separate-img p {
+      font-size: 1.4rem;
   }
 }
