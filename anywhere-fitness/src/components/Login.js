@@ -35,7 +35,7 @@ class Login extends React.Component{
           message: "logging in...",
           errorMessage: ""
         });
-        axios.post('http://localhost:5000/login', fd)
+        axios.post('http://localhost:5000/fitness/login', fd)
           .then(res => {
             if (res.data.success){
               this.setState({

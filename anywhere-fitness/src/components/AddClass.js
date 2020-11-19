@@ -77,7 +77,7 @@ class Login extends React.Component{
                     message: "Adding class...",
                     errorMessage: ""
                     });
-                    axios.post('http://localhost:5000/login', fd)
+                    axios.post('http://localhost:5000/lessons', fd)
                     .then(res => {
                         if (res.data.success){
                         this.setState({
